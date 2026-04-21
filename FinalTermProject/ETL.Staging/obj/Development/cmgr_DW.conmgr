@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="cmgr_DW"
+  DTS:DTSID="{AE4E4A9F-D1FE-4DAC-88AE-C4FC05ACBBB6}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=MEOPC\HUISERVER;Initial Catalog=DWShopeeTH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-ETL.Staging-{AE4E4A9F-D1FE-4DAC-88AE-C4FC05ACBBB6}MEOPC\HUISERVER.DWShopeeTH;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
