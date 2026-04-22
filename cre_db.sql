@@ -6,18 +6,20 @@ This script creates the complete database schema for the Shopee Thailand DW
 including Staging, DW, Cube, and SystemLog schemas.
 ================================================================================
 */
-
+-- RUN THIS FIRST: Create the DWShopeeTH database
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'DWShopeeTH')
 BEGIN
     PRINT 'Creating database DWShopeeTH...';
     CREATE DATABASE DWShopeeTH;
 END
 
--- Switch to DWShopeeTH database
+-- NEXT: Switch to DWShopeeTH database
 /*
 USE DWShopeeTH;
 GO
 */
+
+--NOW: RUN FULL
 
 -- Create main schemas
 IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Staging')
