@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{B0292F4F-E0B9-4EC3-BD10-EB1FAFA74673}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{A0B0DDC4-15E0-4B49-9141-58FA956FF025}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -140,13 +140,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\dft_Staging_StgCustomer"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{251EDA4A-C138-4612-B590-EBD7F35527C9}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="dft_Staging_StgCustomer"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -154,64 +154,64 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Data Conversion"
+              refId="Package\dft_Staging_StgCustomer\dc_Unicode_String"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
-              name="Data Conversion"
+              name="dc_Unicode_String"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[first_name]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Inputs[Data Conversion Input].Columns[first_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="first_name"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]" />
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[first_name]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[last_name]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Inputs[Data Conversion Input].Columns[last_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="last_name"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]" />
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[last_name]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[province]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Inputs[Data Conversion Input].Columns[province]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="province"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[province]" />
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[province]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[city]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Inputs[Data Conversion Input].Columns[city]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="city"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]" />
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[city]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of first_name]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of first_name]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of first_name]"
+                      lineageId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of first_name]"
                       name="Copy of first_name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -219,7 +219,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]}</property>
+                          name="SourceInputColumnLineageID">#{Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[first_name]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -227,13 +227,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of last_name]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of last_name]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of last_name]"
+                      lineageId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of last_name]"
                       name="Copy of last_name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -241,7 +241,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]}</property>
+                          name="SourceInputColumnLineageID">#{Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[last_name]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -249,13 +249,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of province]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of province]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of province]"
+                      lineageId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of province]"
                       name="Copy of province"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -263,7 +263,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[province]}</property>
+                          name="SourceInputColumnLineageID">#{Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[province]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -271,13 +271,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of city]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of city]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of city]"
+                      lineageId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of city]"
                       name="Copy of city"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -285,7 +285,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]}</property>
+                          name="SourceInputColumnLineageID">#{Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[city]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -296,22 +296,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -320,15 +320,15 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Derived Column"
+              refId="Package\dft_Staging_StgCustomer\der_LoadExecutionID"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
+              name="der_LoadExecutionID"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <externalMetadataColumns />
@@ -336,18 +336,18 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  refId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LoadExecutionId]"
+                      refId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Output].Columns[LoadExecutionId]"
                       dataType="i8"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LoadExecutionId]"
+                      lineageId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Output].Columns[LoadExecutionId]"
                       name="LoadExecutionId"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -368,23 +368,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  refId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -393,12 +393,12 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Flat File Source"
+              refId="Package\dft_Staging_StgCustomer\ffs_Customer"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Flat File Source"
+              name="ffs_Customer"
               usesDispositions="true"
               version="1">
               <properties>
@@ -413,25 +413,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                  refId="Package\dft_Staging_StgCustomer\ffs_Customer.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[cmn_Customer]"
                   connectionManagerRefId="Package.ConnectionManagers[cmn_Customer]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[customer_id]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[customer_id]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[customer_id]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[customer_id]"
                       name="customer_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -446,14 +446,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[first_name]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[first_name]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[first_name]"
                       name="first_name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -468,14 +468,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[last_name]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[last_name]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[last_name]"
                       name="last_name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -490,14 +490,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[province]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[province]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[province]"
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[province]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[province]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[province]"
                       name="province"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -512,14 +512,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[city]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[city]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[city]"
                       name="city"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -537,57 +537,57 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="customer_id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[first_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="first_name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[last_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="last_name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[gender]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="gender" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dob]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[dob]"
                       dataType="date"
                       name="dob" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[registration_date]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[registration_date]"
                       dataType="date"
                       name="registration_date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[phone]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[phone]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="phone" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[email]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[email]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="email" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[province]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[province]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="province" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].ExternalColumns[city]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -595,27 +595,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -624,11 +624,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="ole_dst_Staging_StgCustomer"
               usesDispositions="true"
               version="4">
               <properties>
@@ -681,7 +681,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Connections[OleDbConnection]"
                   connectionManagerID="{AE4E4A9F-D1FE-4DAC-88AE-C4FC05ACBBB6}:external"
                   connectionManagerRefId="Project.ConnectionManagers[cmgr_DW]"
                   description="The OLE DB runtime connection used to access the database."
@@ -689,95 +689,95 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[province]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].Columns[province]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="province"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Province]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[province]" />
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Province]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[province]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[city]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].Columns[city]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="city"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]" />
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[city]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_id]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].Columns[customer_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="customer_id"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[customer_id]" />
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[customer_id]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoadExecutionId]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].Columns[LoadExecutionId]"
                       cachedDataType="i8"
                       cachedName="LoadExecutionId"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadExecutionID]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LoadExecutionId]" />
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[LoadExecutionID]"
+                      lineageId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Output].Columns[LoadExecutionId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[first_name]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].Columns[first_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="first_name"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]" />
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[first_name]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[last_name]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].Columns[last_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="last_name"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]" />
+                      externalMetadataColumnId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      lineageId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output].Columns[last_name]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="CustomerID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Province]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Province]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="Province" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[City]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
                       dataType="dbTimeStamp"
                       name="ModifiedDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadExecutionID]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[LoadExecutionID]"
                       dataType="i8"
                       name="LoadExecutionID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="FirstName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
                       codePage="1252"
                       dataType="str"
                       length="255"
@@ -787,22 +787,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -813,32 +813,32 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\dft_Staging_StgCustomer.Paths[Data Conversion Output]"
+              endId="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\dft_Staging_StgCustomer.Paths[Derived Column Output]"
+              endId="Package\dft_Staging_StgCustomer\dc_Unicode_String.Inputs[Data Conversion Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              refId="Package\dft_Staging_StgCustomer.Paths[Flat File Source Output]"
+              endId="Package\dft_Staging_StgCustomer\der_LoadExecutionID.Inputs[Derived Column Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\dft_Staging_StgCustomer\ffs_Customer.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
+      DTS:refId="Package\sql_DeleteCurrentLoadExecutionIdData"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{63CB28FA-4455-47B5-B0A6-2A17BC76A4C8}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
+      DTS:ObjectName="sql_DeleteCurrentLoadExecutionIdData"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -861,10 +861,10 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{5D01402F-C32D-4160-AA8B-C2EBA6F77722}"
-      DTS:From="Package\Execute SQL Task"
+      DTS:From="Package\sql_DeleteCurrentLoadExecutionIdData"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Data Flow Task" />
+      DTS:To="Package\dft_Staging_StgCustomer" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -879,16 +879,16 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task"
-          TopLeft="13.5,78.5" />
+          Size="199,42"
+          Id="Package\dft_Staging_StgCustomer"
+          TopLeft="36.5,78.5" />
         <NodeLayout
-          Size="163,42"
-          Id="Package\Execute SQL Task"
-          TopLeft="13.5,1" />
+          Size="263,42"
+          Id="Package\sql_DeleteCurrentLoadExecutionIdData"
+          TopLeft="5.5,1" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="92,43">
+          TopLeft="136.5,43">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -912,29 +912,51 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\dft_Staging_StgCustomer">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="157,55" />
+          Size="141,42"
+          Id="Package\dft_Staging_StgCustomer\ffs_Customer"
+          TopLeft="74.25,15" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="157,355" />
+          Size="220,42"
+          Id="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer"
+          TopLeft="34.25,315" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="157,162" />
+          Size="179,42"
+          Id="Package\dft_Staging_StgCustomer\der_LoadExecutionID"
+          TopLeft="54.75,122" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="157,256" />
+          Size="167,42"
+          Id="Package\dft_Staging_StgCustomer\dc_Unicode_String"
+          TopLeft="60.75,216" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="233.25,97">
+          Id="Package\dft_Staging_StgCustomer.Paths[Data Conversion Output]"
+          TopLeft="144.25,258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\dft_Staging_StgCustomer.Paths[Flat File Source Output]"
+          TopLeft="144.5,57">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -955,8 +977,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="234.5,204">
+          Id="Package\dft_Staging_StgCustomer.Paths[Derived Column Output]"
+          TopLeft="144.25,164">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -976,33 +998,11 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="238.75,298">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\dft_Staging_StgCustomer\ole_dst_Staging_StgCustomer">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

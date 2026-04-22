@@ -11,16 +11,16 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{922504D7-A2F1-4CD7-9A9E-97A4DC8E61D8}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{03FF080B-25D7-4978-902D-AC1ED9FB77E2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[cmn_Campaign]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{04076F76-F043-43E1-ADFB-0E0CE3C933A2}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:ObjectName="cmn_Campaign">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="campaign_id"
-              DTS:DTSID="{08B5F254-C5E8-4DF8-A4E5-9279609E154D}"
+              DTS:DTSID="{5EA96A50-0CAE-447A-9B4B-D727D6BA71BB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="campaign_name"
-              DTS:DTSID="{F127F40A-518A-46C2-8E8F-3E6DF56875D4}"
+              DTS:DTSID="{257FEA7D-4C19-4106-9521-E14FB6A09D11}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="start_date"
-              DTS:DTSID="{95908B1C-6310-4987-822C-BDB1BCDA470B}"
+              DTS:DTSID="{B1309AFE-B23D-41AD-8B5A-0FA2299CC542}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="end_date"
-              DTS:DTSID="{3D0D03E8-6C3F-4EC5-BF79-D469546C475D}"
+              DTS:DTSID="{92EB6780-F672-458C-A5D6-CEB43D81DCF9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="campaign_type"
-              DTS:DTSID="{94AAEF5D-72BC-42CD-BD3E-D252BC109955}"
+              DTS:DTSID="{BD827793-1794-4DB1-8615-D1CCA67D7D5C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -121,123 +121,15 @@
           version="1">
           <components>
             <component
-              refId="Package\dft_Staging_Campaign\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\dft_Staging_Campaign\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\dft_Staging_Campaign\Data Conversion.Inputs[Data Conversion Input].Columns[campaign_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="campaign_name"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_name]" />
-                    <inputColumn
-                      refId="Package\dft_Staging_Campaign\Data Conversion.Inputs[Data Conversion Input].Columns[campaign_type]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="campaign_type"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_type]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\dft_Staging_Campaign\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of campaign_name]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of campaign_name]"
-                      name="Copy of campaign_name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_name]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of campaign_type]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of campaign_type]"
-                      name="Copy of campaign_type"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_type]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\dft_Staging_Campaign\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\dft_Staging_Campaign\Derived Column"
+              refId="Package\dft_Staging_Campaign\der_LoadExecutionID"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
+              name="der_LoadExecutionID"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\dft_Staging_Campaign\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\dft_Staging_Campaign\der_LoadExecutionID.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <externalMetadataColumns />
@@ -245,18 +137,18 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Output]"
+                  refId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\dft_Staging_Campaign\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\dft_Staging_Campaign\der_LoadExecutionID.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Output].Columns[LoadExcutionID]"
+                      refId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Output].Columns[LoadExcutionID]"
                       dataType="i8"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Output].Columns[LoadExcutionID]"
+                      lineageId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Output].Columns[LoadExcutionID]"
                       name="LoadExcutionID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -277,23 +169,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Error Output]"
+                  refId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\dft_Staging_Campaign\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\dft_Staging_Campaign\der_LoadExecutionID.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -302,12 +194,120 @@
               </outputs>
             </component>
             <component
-              refId="Package\dft_Staging_Campaign\Flat File Source"
+              refId="Package\dft_Staging_Campaign\dtcv_Unicode_String"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="dtcv_Unicode_String"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Inputs[Data Conversion Input].Columns[campaign_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="campaign_name"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_name]" />
+                    <inputColumn
+                      refId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Inputs[Data Conversion Input].Columns[campaign_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="campaign_type"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_type]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of campaign_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of campaign_name]"
+                      name="Copy of campaign_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of campaign_type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Output].Columns[Copy of campaign_type]"
+                      name="Copy of campaign_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_type]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\dft_Staging_Campaign\ffs_Campaign"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Flat File Source"
+              name="ffs_Campaign"
               usesDispositions="true"
               version="1">
               <properties>
@@ -322,25 +322,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\dft_Staging_Campaign\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  refId="Package\dft_Staging_Campaign\ffs_Campaign.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cmn_Campaign]"
+                  connectionManagerRefId="Package.ConnectionManagers[cmn_Campaign]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_id]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_id]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[campaign_id]"
+                      externalMetadataColumnId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].ExternalColumns[campaign_id]"
                       length="50"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_id]"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_id]"
                       name="campaign_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -355,14 +355,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_name]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_name]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[campaign_name]"
+                      externalMetadataColumnId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].ExternalColumns[campaign_name]"
                       length="50"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_name]"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_name]"
                       name="campaign_name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -377,14 +377,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_type]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_type]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[campaign_type]"
+                      externalMetadataColumnId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].ExternalColumns[campaign_type]"
                       length="50"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_type]"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_type]"
                       name="campaign_type"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -402,31 +402,31 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[campaign_id]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].ExternalColumns[campaign_id]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="campaign_id" />
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[campaign_name]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].ExternalColumns[campaign_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="campaign_name" />
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[start_date]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].ExternalColumns[start_date]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="start_date" />
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[end_date]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].ExternalColumns[end_date]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="end_date" />
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[campaign_type]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].ExternalColumns[campaign_type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -434,27 +434,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -463,11 +463,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\dft_Staging_Campaign\OLE DB Destination"
+              refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="ole_dst_Staging_StgCampaign"
               usesDispositions="true"
               version="4">
               <properties>
@@ -520,7 +520,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\dft_Staging_Campaign\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Connections[OleDbConnection]"
                   connectionManagerID="{AE4E4A9F-D1FE-4DAC-88AE-C4FC05ACBBB6}:external"
                   connectionManagerRefId="Project.ConnectionManagers[cmgr_DW]"
                   description="The OLE DB runtime connection used to access the database."
@@ -528,69 +528,69 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[campaign_id]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].Columns[campaign_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="campaign_id"
-                      externalMetadataColumnId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CampaignID]"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_id]" />
+                      externalMetadataColumnId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].ExternalColumns[CampaignID]"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_id]" />
                     <inputColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[campaign_name]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].Columns[campaign_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="campaign_name"
-                      externalMetadataColumnId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CampaignName]"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_name]" />
+                      externalMetadataColumnId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].ExternalColumns[CampaignName]"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_name]" />
                     <inputColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[campaign_type]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].Columns[campaign_type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="campaign_type"
-                      externalMetadataColumnId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CampaignType]"
-                      lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_type]" />
+                      externalMetadataColumnId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].ExternalColumns[CampaignType]"
+                      lineageId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output].Columns[campaign_type]" />
                     <inputColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoadExcutionID]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].Columns[LoadExcutionID]"
                       cachedDataType="i8"
                       cachedName="LoadExcutionID"
-                      externalMetadataColumnId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadExecutionID]"
-                      lineageId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Output].Columns[LoadExcutionID]" />
+                      externalMetadataColumnId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].ExternalColumns[LoadExecutionID]"
+                      lineageId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Output].Columns[LoadExcutionID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CampaignID]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].ExternalColumns[CampaignID]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="CampaignID" />
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CampaignName]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].ExternalColumns[CampaignName]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="CampaignName" />
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CampaignType]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].ExternalColumns[CampaignType]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="CampaignType" />
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
                       dataType="dbTimeStamp"
                       name="ModifiedDate" />
                     <externalMetadataColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadExecutionID]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input].ExternalColumns[LoadExecutionID]"
                       dataType="i8"
                       name="LoadExecutionID" />
                   </externalMetadataColumns>
@@ -598,22 +598,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\dft_Staging_Campaign\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\dft_Staging_Campaign\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\dft_Staging_Campaign\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -625,31 +625,31 @@
           <paths>
             <path
               refId="Package\dft_Staging_Campaign.Paths[Data Conversion Output]"
-              endId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\dft_Staging_Campaign\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Outputs[Data Conversion Output]" />
             <path
               refId="Package\dft_Staging_Campaign.Paths[Derived Column Output]"
-              endId="Package\dft_Staging_Campaign\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\dft_Staging_Campaign\dtcv_Unicode_String.Inputs[Data Conversion Input]"
               name="Derived Column Output"
-              startId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\dft_Staging_Campaign\der_LoadExecutionID.Outputs[Derived Column Output]" />
             <path
               refId="Package\dft_Staging_Campaign.Paths[Flat File Source Output]"
-              endId="Package\dft_Staging_Campaign\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\dft_Staging_Campaign\der_LoadExecutionID.Inputs[Derived Column Input]"
               name="Flat File Source Output"
-              startId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\dft_Staging_Campaign\ffs_Campaign.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\sql_DeleteCurrentLoadID"
+      DTS:refId="Package\sql_DeleteCurrentLoadExecutionIdData"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{8B43AD5D-2C9E-4F75-AA88-333DCF7E1491}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="sql_DeleteCurrentLoadID"
+      DTS:ObjectName="sql_DeleteCurrentLoadExecutionIdData"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -672,7 +672,7 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{111CC0BD-961E-4AD7-862E-AE7D25953C0A}"
-      DTS:From="Package\sql_DeleteCurrentLoadID"
+      DTS:From="Package\sql_DeleteCurrentLoadExecutionIdData"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\dft_Staging_Campaign" />
@@ -692,14 +692,14 @@
         <NodeLayout
           Size="186,42"
           Id="Package\dft_Staging_Campaign"
-          TopLeft="112,109" />
+          TopLeft="59.25,119" />
         <NodeLayout
-          Size="197,42"
-          Id="Package\sql_DeleteCurrentLoadID"
-          TopLeft="112,1" />
+          Size="263,42"
+          Id="Package\sql_DeleteCurrentLoadExecutionIdData"
+          TopLeft="20.75,11" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="207.75,43">
+          TopLeft="152.25,53">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -728,24 +728,24 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154,42"
-          Id="Package\dft_Staging_Campaign\OLE DB Destination"
-          TopLeft="364,383" />
+          Size="222,42"
+          Id="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign"
+          TopLeft="18.625,347" />
         <NodeLayout
-          Size="151,42"
-          Id="Package\dft_Staging_Campaign\Flat File Source"
-          TopLeft="364,54" />
+          Size="143,42"
+          Id="Package\dft_Staging_Campaign\ffs_Campaign"
+          TopLeft="58.625,18" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\dft_Staging_Campaign\Derived Column"
-          TopLeft="364,163" />
+          Size="179,42"
+          Id="Package\dft_Staging_Campaign\der_LoadExecutionID"
+          TopLeft="40.125,127" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\dft_Staging_Campaign\Data Conversion"
-          TopLeft="364,272" />
+          Size="176,42"
+          Id="Package\dft_Staging_Campaign\dtcv_Unicode_String"
+          TopLeft="41.625,236" />
         <EdgeLayout
           Id="Package\dft_Staging_Campaign.Paths[Flat File Source Output]"
-          TopLeft="440.25,96">
+          TopLeft="129.875,60">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -767,7 +767,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\dft_Staging_Campaign.Paths[Derived Column Output]"
-          TopLeft="441.5,205">
+          TopLeft="129.625,169">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -789,7 +789,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\dft_Staging_Campaign.Paths[Data Conversion Output]"
-          TopLeft="441.5,314">
+          TopLeft="129.625,278">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -813,7 +813,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\dft_Staging_Campaign\OLE DB Destination">
+    design-time-name="Package\dft_Staging_Campaign\ole_dst_Staging_StgCampaign">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
