@@ -1,0 +1,148 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\EP_Staging.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|solutionrelative:ETL.Staging\\EP_Staging.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgSeller.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|solutionrelative:ETL.Staging\\StgSeller.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgShipment.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|solutionrelative:ETL.Staging\\StgShipment.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgSession.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|solutionrelative:ETL.Staging\\StgSession.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgProduct.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|solutionrelative:ETL.Staging\\StgProduct.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgCampaign.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|solutionrelative:ETL.Staging\\StgCampaign.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgCustomer.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|solutionrelative:ETL.Staging\\StgCustomer.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgOrderHeader.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D0122425-D028-70F1-90B0-829F8814CBB9}|ETL.Staging\\ETL.Staging.dtproj|solutionrelative:ETL.Staging\\StgOrderHeader.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StgProduct.dtsx [Design]",
+              "DocumentMoniker": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgProduct.dtsx",
+              "RelativeDocumentMoniker": "ETL.Staging\\StgProduct.dtsx",
+              "ToolTip": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgProduct.dtsx [Design]",
+              "RelativeToolTip": "ETL.Staging\\StgProduct.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-04-22T09:06:20.148Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StgSession.dtsx [Design]",
+              "DocumentMoniker": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgSession.dtsx",
+              "RelativeDocumentMoniker": "ETL.Staging\\StgSession.dtsx",
+              "ToolTip": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgSession.dtsx [Design]",
+              "RelativeToolTip": "ETL.Staging\\StgSession.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-04-22T09:00:27.348Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StgShipment.dtsx [Design]",
+              "DocumentMoniker": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgShipment.dtsx",
+              "RelativeDocumentMoniker": "ETL.Staging\\StgShipment.dtsx",
+              "ToolTip": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgShipment.dtsx [Design]",
+              "RelativeToolTip": "ETL.Staging\\StgShipment.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-04-22T09:00:26.651Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StgSeller.dtsx [Design]",
+              "DocumentMoniker": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgSeller.dtsx",
+              "RelativeDocumentMoniker": "ETL.Staging\\StgSeller.dtsx",
+              "ToolTip": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgSeller.dtsx [Design]",
+              "RelativeToolTip": "ETL.Staging\\StgSeller.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-04-22T09:00:26Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EP_Staging.dtsx [Design]",
+              "DocumentMoniker": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\EP_Staging.dtsx",
+              "RelativeDocumentMoniker": "ETL.Staging\\EP_Staging.dtsx",
+              "ToolTip": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\EP_Staging.dtsx [Design]",
+              "RelativeToolTip": "ETL.Staging\\EP_Staging.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-04-22T08:56:43.309Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StgCampaign.dtsx [Design]",
+              "DocumentMoniker": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgCampaign.dtsx",
+              "RelativeDocumentMoniker": "ETL.Staging\\StgCampaign.dtsx",
+              "ToolTip": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgCampaign.dtsx [Design]",
+              "RelativeToolTip": "ETL.Staging\\StgCampaign.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-04-22T08:48:47.989Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StgOrderHeader.dtsx [Design]",
+              "DocumentMoniker": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgOrderHeader.dtsx",
+              "RelativeDocumentMoniker": "ETL.Staging\\StgOrderHeader.dtsx",
+              "ToolTip": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgOrderHeader.dtsx [Design]",
+              "RelativeToolTip": "ETL.Staging\\StgOrderHeader.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-04-22T08:48:46.457Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StgCustomer.dtsx [Design]",
+              "DocumentMoniker": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgCustomer.dtsx",
+              "RelativeDocumentMoniker": "ETL.Staging\\StgCustomer.dtsx",
+              "ToolTip": "D:\\NhatHuy\\study\\DW\\dw_shopee_thailand\\FinalTermProject\\ETL.Staging\\StgCustomer.dtsx [Design]",
+              "RelativeToolTip": "ETL.Staging\\StgCustomer.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-04-22T08:48:43.316Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{42477D80-B1E2-4189-A085-C59EB9D2C86F}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{922504D7-A2F1-4CD7-9A9E-97A4DC8E61D8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -87,7 +87,7 @@
       DTS:CreationName=""
       DTS:DataType="20"
       DTS:DTSID="{E3AD3624-2460-4ACF-BB37-78E5E4D353C7}"
-      DTS:ObjectName="LoadExcutionID"
+      DTS:ObjectName="LoadExecutionID"
       DTS:Required="True">
       <DTS:Property
         DTS:DataType="20"
@@ -264,13 +264,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">@[$Package::LoadExcutionID]</property>
+                          name="Expression">@[$Package::LoadExecutionID]</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">@[$Package::LoadExcutionID]</property>
+                          name="FriendlyExpression">@[$Package::LoadExecutionID]</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -558,6 +558,12 @@
                       cachedName="campaign_type"
                       externalMetadataColumnId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CampaignType]"
                       lineageId="Package\dft_Staging_Campaign\Flat File Source.Outputs[Flat File Source Output].Columns[campaign_type]" />
+                    <inputColumn
+                      refId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoadExcutionID]"
+                      cachedDataType="i8"
+                      cachedName="LoadExcutionID"
+                      externalMetadataColumnId="Package\dft_Staging_Campaign\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadExecutionID]"
+                      lineageId="Package\dft_Staging_Campaign\Derived Column.Outputs[Derived Column Output].Columns[LoadExcutionID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -653,7 +659,7 @@
           SQLTask:SqlStatementSource="DELETE FROM [Staging].[StgCampaign] WHERE [LoadExecutionId] = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
-            SQLTask:DtsVariableName="$Package::LoadExcutionID"
+            SQLTask:DtsVariableName="$Package::LoadExecutionID"
             SQLTask:ParameterDirection="Input"
             SQLTask:DataType="3"
             SQLTask:ParameterSize="-1" />
@@ -720,7 +726,7 @@
     design-time-name="Package\dft_Staging_Campaign">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="154,42"
           Id="Package\dft_Staging_Campaign\OLE DB Destination"
@@ -756,9 +762,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -780,9 +784,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -804,9 +806,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

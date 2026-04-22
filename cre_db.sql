@@ -191,8 +191,8 @@ into DW tables. They include ModifiedDate and LoadExcutionID for ETL tracking.
 DROP TABLE IF EXISTS [Staging].[StgCustomer];
 CREATE TABLE [Staging].[StgCustomer] (
     CustomerID     VARCHAR(255) PRIMARY KEY,
-    CustomerName   VARCHAR(255),
-    Address         TEXT,
+    FirstName      VARCHAR(255),
+    LastName       VARCHAR(255),
     Province        VARCHAR(100),
     City            VARCHAR(100),
     ModifiedDate    DATETIME CONSTRAINT DF_StgCustomer_ModifiedDate DEFAULT GETDATE() NOT NULL,
@@ -203,7 +203,7 @@ CREATE TABLE [Staging].[StgCustomer] (
 DROP TABLE IF EXISTS [Staging].[StgSession];
 CREATE TABLE [Staging].[StgSession] (
     SessionID   VARCHAR(255) PRIMARY KEY,
-    UserID      INT,
+    UserID      VARCHAR(255),
     DeviceType  VARCHAR(50),
     ModifiedDate    DATETIME CONSTRAINT DF_StgSession_ModifiedDate DEFAULT GETDATE() NOT NULL,
     LoadExecutionID  BIGINT
@@ -214,6 +214,8 @@ DROP TABLE IF EXISTS [Staging].[StgShipment];
 CREATE TABLE [Staging].[StgShipment] (
     ShipmentID   VARCHAR(255) PRIMARY KEY,
     ShipmentType VARCHAR(100),
+    ShipDate      DATE NOT NULL,
+    DeliveryDate  DATE NOT NULL,
     ModifiedDate    DATETIME CONSTRAINT DF_StgShipment_ModifiedDate DEFAULT GETDATE() NOT NULL,
     LoadExecutionID  BIGINT
 );
@@ -241,9 +243,6 @@ CREATE TABLE [Staging].[StgProduct] (
     SellerID         VARCHAR(255),
     ModifiedDate    DATETIME CONSTRAINT DF_StgProduct_ModifiedDate DEFAULT GETDATE() NOT NULL,
     LoadExecutionID      BIGINT,
-    CONSTRAINT fk_stg_product_seller
-        FOREIGN KEY (SellerID)
-        REFERENCES [Staging].[StgSeller](SellerID)
 );
 
 -- Staging: Campaign data from source
@@ -256,22 +255,24 @@ CREATE TABLE [Staging].[StgCampaign] (
     LoadExecutionID  BIGINT
 );
 
--- Staging: Order Details data from source (main fact table staging)
-DROP TABLE IF EXISTS [Staging].[StgOrderDetails];
-CREATE TABLE [Staging].[StgOrderDetails] (
-    OrderItemId       INT PRIMARY KEY,
-    OrderId           INT,
-    ProductId         VARCHAR(255),
+-- Staging: Order Items data from source (main fact table staging)
+DROP TABLE IF EXISTS [Staging].[StgOrderItems];
+CREATE TABLE [Staging].[StgOrderItems] (
+    OrderItemID       INT PRIMARY KEY,
+    OrderID           INT,
+    ProductID         VARCHAR(255),
     Quantity          INT,
     UnitPrice         NUMERIC(10,2),
     UnitPriceAfterDiscount NUMERIC(10,2),
     Discount          NUMERIC(5,2),
-    LineTotal         NUMERIC(12,2),
+    LineTotal         NUMERIC(12,2),    
     CommissionAmount  NUMERIC(12,2),
     MaintenanceAmount NUMERIC(12,2),
     ShippingFee       NUMERIC(10,2),
+    EstimatedDeliveryStartDate DATE,
+    EstimatedDeliveryEndDate   DATE,
     CampaignFlag             BIT,
-    ModifiedDate    DATETIME CONSTRAINT DF_StgOrderDetails_ModifiedDate DEFAULT GETDATE() NOT NULL,
+    ModifiedDate    DATETIME CONSTRAINT DF_StgOrderItems_ModifiedDate DEFAULT GETDATE() NOT NULL,
     LoadExecutionID  BIGINT,
 );
 
@@ -280,7 +281,6 @@ DROP TABLE IF EXISTS [Staging].[StgOrderHeader];
 CREATE TABLE [Staging].[StgOrderHeader] (
     OrderId         INT PRIMARY KEY,
     CustomerId      VARCHAR(255),
-    SessionId       VARCHAR(255),
     OrderDate       DATE,
     DueDate         DATE,
     ShippedDate     DATE,
@@ -289,7 +289,7 @@ CREATE TABLE [Staging].[StgOrderHeader] (
     CommissionTotal  NUMERIC(12,2),
     MaintenanceTotal NUMERIC(12,2),
     TotalAmount      NUMERIC(12,2),
-    CampaignId         VARCHAR(255),
+    CampaignId       VARCHAR(255),
     ModifiedDate    DATETIME CONSTRAINT DF_StgOrderHeader_ModifiedDate DEFAULT GETDATE() NOT NULL,
     LoadExecutionID  BIGINT
 );
