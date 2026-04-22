@@ -4,16 +4,16 @@
     <BuildType Name="Development" />
     <BuildType Name="Release" />
   </Configurations>
+  <Project Path="Datamart/ETL.DW.dtproj" Type="c9674dcb-5085-4a16-b785-4c70dd1589bd">
+    <BuildType Project="Development" />
+    <Platform Project="?" />
+  </Project>
   <Project Path="DB.DWShopeeTH/DB.DWShopeeTH.sqlproj" Id="998fd88d-62f5-46cd-9b21-feb86e91ed7e">
     <BuildType Solution="Development|*" Project="Release" />
     <Build />
     <Deploy />
   </Project>
-  <Project Path="ETL.DW/ETL.DW.dtproj" Type="c9674dcb-5085-4a16-b785-4c70dd1589bd">
-    <BuildType Project="Development" />
-    <Platform Project="?" />
-  </Project>
-  <Project Path="ETL.Staging/ETL.Staging.dtproj" Type="c9674dcb-5085-4a16-b785-4c70dd1589bd">
+  <Project Path="Staging/ETL.Staging.dtproj" Type="c9674dcb-5085-4a16-b785-4c70dd1589bd">
     <BuildType Project="Development" />
     <Platform Project="?" />
   </Project>
